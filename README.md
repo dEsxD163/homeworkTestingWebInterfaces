@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/vdoighpb8kwuao17?svg=true)](https://ci.appveyor.com/project/dEsxD163/homeworktestingwebinterfaces-08en1)
