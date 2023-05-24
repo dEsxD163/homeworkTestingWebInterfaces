@@ -27,6 +27,7 @@ class ChromeTest {
     @AfterEach
     void teardown() {
         driver.quit();
+        driver = null;
     }
 
     @Test
@@ -36,8 +37,8 @@ class ChromeTest {
         driver.findElements(By.tagName("input")).get(1).sendKeys("+79270000000");
         driver.findElement(By.tagName("label")).click();
         driver.findElement(By.tagName("button")).click();
-        String expected = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
-        String actual = driver.findElement(By.tagName("p")).getText().trim();
+        String expected = "  Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
+        String actual = driver.findElement(By.tagName("p")).getText();
         assertEquals(expected, actual);
     }
 
